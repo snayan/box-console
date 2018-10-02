@@ -8,7 +8,9 @@
   "scripts": {
     "prepare": "node script/compile.js",
     "prepublishOnly": "node script/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:cjs": "node examples/index.js",
+    "test:mjs": "node --experimental-modules examples/index.mjs",
+    "test": "npm run test:cjs && npm run test:mjs"
   },
   "files":[
     "src",
