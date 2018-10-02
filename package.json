@@ -1,0 +1,41 @@
+{
+  "name": "box-console",
+  "version": "1.0.0",
+  "description": "box console for node",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "prepare": "node script/compile.js",
+    "prepublishOnly": "node script/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files":[
+    "src",
+    "dist",
+    "types"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snayan/box-console.git"
+  },
+  "keywords": [
+    "console",
+    "node"
+  ],
+  "author": "snayan@sina.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snayan/box-console/issues"
+  },
+  "homepage": "https://github.com/snayan/box-console#readme",
+  "devDependencies": {
+    "rollup": "^0.66.2",
+    "typescript": "^3.1.1"
+  },
+  "peerDependencies": {
+    "chalk": "^2.4.1",
+    "string-width": "^2.1.1"
+  }
+}
