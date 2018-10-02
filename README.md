@@ -1,7 +1,7 @@
 # box-console
 > Terminal box message 
 
-![console](/Users/yang.zhang/Documents/github/box-console/media/console.jpg)
+![console](media/console.jpg)
 
 ## Install
 
