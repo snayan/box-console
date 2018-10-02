@@ -1,5 +1,6 @@
-# box-console
-> Terminal box message 
+# box-console [![Build Status](https://travis-ci.com/snayan/box-console.svg?branch=master)](https://travis-ci.org/snayan/boxen)
+
+> Terminal box message
 
 ![console](media/console.jpg)
 
