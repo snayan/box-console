@@ -17,6 +17,9 @@
     "dist",
     "types"
   ],
+  "engines": {
+		"node": ">=8"
+	},
   "sideEffects": false,
   "repository": {
     "type": "git",
