@@ -1,4 +1,4 @@
-# box-console [![Build Status](https://travis-ci.com/snayan/box-console.svg?branch=master)](https://travis-ci.org/snayan/box-console) [![npm dependents](https://badgen.net/npm/dependents/box-console)](https://www.npmjs.com/package/box-console?activeTab=dependents)
+# box-console [![Build Status](https://api.travis-ci.org/snayan/box-console.svg?branch=master)](https://travis-ci.org/snayan/box-console) [![npm dependents](https://badgen.net/npm/dependents/box-console)](https://www.npmjs.com/package/box-console?activeTab=dependents)
 
 > Terminal box message
 
