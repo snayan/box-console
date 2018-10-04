@@ -1,7 +1,7 @@
 import stringWidth from 'string-width';
 import chalk from 'chalk';
 
-const boxConsole = function(messages: string[]): void {
+const boxConsole = function(messages: string[]): string {
   let tips = [];
   let maxLen = 0;
   let defaultSpace = 4;
@@ -11,6 +11,9 @@ const boxConsole = function(messages: string[]): void {
     tips = Array.from(messages);
   } else {
     tips = [messages];
+  }
+  if (tips.length === 1 && tips[0] === '') {
+    return '';
   }
   tips = [' ', ...tips, ' '];
   tips = tips.map((msg) => ({ val: msg, len: stringWidth(msg) }));
@@ -32,11 +35,12 @@ const boxConsole = function(messages: string[]): void {
     return ' '.repeat(i) + val + ' '.repeat(j);
   });
   let line = chalk.yellow('─'.repeat(maxLen));
-  console.log(chalk.yellow('┌') + line + chalk.yellow('┐'));
+  let result = ['\n', chalk.yellow('┌') + line + chalk.yellow('┐')];
   for (let msg of tips) {
-    console.log(chalk.yellow('│') + msg + chalk.yellow('│'));
+    result.push(chalk.yellow('│') + msg + chalk.yellow('│'));
   }
-  console.log(chalk.yellow('└') + line + chalk.yellow('┘'));
+  result.push(chalk.yellow('└') + line + chalk.yellow('┘'));
+  return result.join('\n');
 };
 
 export default boxConsole;
