@@ -8,17 +8,16 @@
   "scripts": {
     "prepare": "node script/compile.js",
     "build": "node script/build.js",
-    "test:cjs": "node examples/index.js",
-    "test:mjs": "node --experimental-modules examples/index.mjs"
+    "test": "npm run prepare && ava"
   },
-  "files":[
+  "files": [
     "src",
     "dist",
     "types"
   ],
   "engines": {
-		"node": ">=8"
-	},
+    "node": ">=8"
+  },
   "sideEffects": false,
   "repository": {
     "type": "git",
@@ -35,11 +34,21 @@
   },
   "homepage": "https://github.com/snayan/box-console#readme",
   "devDependencies": {
+    "ava": "1.0.0-beta.8",
+    "esm": "^3.0.84",
     "rollup": "^0.66.2",
     "typescript": "^3.1.1"
   },
   "peerDependencies": {
     "chalk": "^2.4.1",
     "string-width": "^2.1.1"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "require": [
+      "esm"
+    ]
   }
 }
