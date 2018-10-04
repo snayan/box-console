@@ -32,7 +32,7 @@ import boxConsole from 'box-console';
 
 ## API
 
-### boxConsole(messages)
+### boxConsole(messages) => string
 
 #### messages
 
